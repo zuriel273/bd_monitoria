@@ -1,29 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "aluno".
+ * This is the model class for table "departamento".
  *
- * The followings are the available columns in table 'aluno':
+ * The followings are the available columns in table 'departamento':
  * @property integer $id
- * @property string $curso
- * @property string $ano_ingresso
- * @property integer $banco
- * @property integer $agencia
- * @property integer $cc
- * @property string $historico
+ * @property integer $chefe
+ * @property string $nome
  *
  * The followings are the available model relations:
- * @property Monitoria[] $monitorias
- * @property Pessoa[] $pessoas
+ * @property Professor[] $professors
  */
-class Aluno extends CActiveRecord
+class Departamento extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'aluno';
+		return 'departamento';
 	}
 
 	/**
@@ -34,13 +29,12 @@ class Aluno extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('banco, agencia, cc', 'numerical', 'integerOnly'=>true),
-			array('curso', 'length', 'max'=>45),
-			array('ano_ingresso', 'length', 'max'=>5),
-			array('historico', 'safe'),
+			array('nome', 'required'),
+			array('chefe', 'numerical', 'integerOnly'=>true),
+			array('nome', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, curso, ano_ingresso, banco, agencia, cc, historico', 'safe', 'on'=>'search'),
+			array('id, chefe, nome', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,8 +46,7 @@ class Aluno extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'monitorias' => array(self::HAS_MANY, 'Monitoria', 'aluno_id_aluno'),
-			'pessoas' => array(self::HAS_MANY, 'Pessoa', 'aluno_id_aluno'),
+			'professors' => array(self::HAS_MANY, 'Professor', 'departamento_id_departamento'),
 		);
 	}
 
@@ -63,13 +56,9 @@ class Aluno extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			//'id' => 'ID',
-			'curso' => 'Curso',
-			'ano_ingresso' => 'Ano de Ingresso',
-			'banco' => 'Banco',
-			'agencia' => 'Agencia',
-			'cc' => 'Conta Corrente',
-			'historico' => 'Historico',
+			'id' => 'ID',
+			'chefe' => 'Chefe',
+			'nome' => 'Nome',
 		);
 	}
 
@@ -92,43 +81,25 @@ class Aluno extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('curso',$this->curso,true);
-		$criteria->compare('ano_ingresso',$this->ano_ingresso,true);
-		$criteria->compare('banco',$this->banco);
-		$criteria->compare('agencia',$this->agencia);
-		$criteria->compare('cc',$this->cc);
-		$criteria->compare('historico',$this->historico,true);
+		$criteria->compare('chefe',$this->chefe);
+		$criteria->compare('nome',$this->nome,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
         
-         public function cadastroAluno($pessoa)
-        {
-            
-            $sql = " INSERT INTO `aluno`( `curso`, `ano_ingresso`, `banco`, `agencia`, `cc`, `historico`)  
-                     VALUES ($pessoa->curso,$pessoa->ano_ingresso,$pessoa->banco,$pessoa->agencia,$pessoa->cc,$pessoa->historico)";
-       //   dd($sql);
+        public function cadastroDepartamento($departamento){
+              $sql = " INSERT INTO `departamento`( `chefe`, `nome`)  
+                       VALUES ($departamento->chefe,$departamento->nome)";
             $comando = Yii::app()->db->createCommand($sql);   
             $comando->execute();
-        }
-        
-        public function procuraId($aluno){
-                       
-          $sql = "SELECT id FROM `aluno` WHERE agencia = $aluno->agencia and cc = $aluno->cc";
-         // dd($sql); 
-          $comando = Yii::app()->db->createCommand($sql);   
-         // $comando->execute();
-          //dd($comando); 
-          return $comando->queryRow();
         }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Aluno the static model class
+	 * @return Departamento the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

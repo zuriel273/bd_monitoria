@@ -40,7 +40,7 @@ class Pessoa extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cpf, professor_id_professor, aluno_id_aluno', 'required'),
+			array('cpf', 'required'),
 			array('cpf, tipo, professor_id_professor, aluno_id_aluno', 'numerical', 'integerOnly'=>true),
 			array('nome, email, endereco, telefone', 'length', 'max'=>45),
 			array('senha', 'length', 'max'=>16),
@@ -132,14 +132,13 @@ class Pessoa extends CActiveRecord
 	 * @return Pessoa the static model class
 	 */
         
-        public function cadastroPessoa(Pessoa $pessoa)
+        public function cadastroPessoa(Pessoa $pessoa, $id_aluno)
         {
-            $sql = "INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
-                     VALUES (.$pessoa->cpf.,.$pessoa->nome.,.$pessoa->email.,.$pessoa->senha.,.$pessoa->rg.,.$pessoa->orgao_emissor.,.$pessoa->endereco.,.$pessoa->telefone.,.$pessoa->tipo.,.$pessoa->matricula.)";
-        
-            dd($sql);
-          
-           // $results=$command->query();
+            $sql = "INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`,`aluno_id_aluno`) 
+                     VALUES ($pessoa->cpf,$pessoa->nome,$pessoa->email,$pessoa->senha,$pessoa->rg,$pessoa->orgao_emissor,$pessoa->endereco,$pessoa->telefone,$pessoa->tipo,$pessoa->matricula, $id_aluno)";
+                   
+            $comando = Yii::app()->db->createCommand($sql);   
+            $comando->execute();
         }
 
 

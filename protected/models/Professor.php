@@ -1,29 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "aluno".
+ * This is the model class for table "professor".
  *
- * The followings are the available columns in table 'aluno':
+ * The followings are the available columns in table 'professor':
  * @property integer $id
- * @property string $curso
- * @property string $ano_ingresso
- * @property integer $banco
- * @property integer $agencia
- * @property integer $cc
- * @property string $historico
+ * @property integer $departamento_id_departamento
  *
  * The followings are the available model relations:
  * @property Monitoria[] $monitorias
  * @property Pessoa[] $pessoas
+ * @property Departamento $departamentoIdDepartamento
+ * @property Projetodemonitoria[] $projetodemonitorias
  */
-class Aluno extends CActiveRecord
+class Professor extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'aluno';
+		return 'professor';
 	}
 
 	/**
@@ -34,13 +31,11 @@ class Aluno extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('banco, agencia, cc', 'numerical', 'integerOnly'=>true),
-			array('curso', 'length', 'max'=>45),
-			array('ano_ingresso', 'length', 'max'=>5),
-			array('historico', 'safe'),
+			array('departamento_id_departamento', 'required'),
+			array('departamento_id_departamento', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, curso, ano_ingresso, banco, agencia, cc, historico', 'safe', 'on'=>'search'),
+			array('id, departamento_id_departamento', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,8 +47,10 @@ class Aluno extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'monitorias' => array(self::HAS_MANY, 'Monitoria', 'aluno_id_aluno'),
-			'pessoas' => array(self::HAS_MANY, 'Pessoa', 'aluno_id_aluno'),
+			'monitorias' => array(self::HAS_MANY, 'Monitoria', 'professor_id_professor'),
+			'pessoas' => array(self::HAS_MANY, 'Pessoa', 'professor_id_professor'),
+			'departamentoIdDepartamento' => array(self::BELONGS_TO, 'Departamento', 'departamento_id_departamento'),
+			'projetodemonitorias' => array(self::HAS_MANY, 'Projetodemonitoria', 'professor_id_professor'),
 		);
 	}
 
@@ -63,13 +60,8 @@ class Aluno extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			//'id' => 'ID',
-			'curso' => 'Curso',
-			'ano_ingresso' => 'Ano de Ingresso',
-			'banco' => 'Banco',
-			'agencia' => 'Agencia',
-			'cc' => 'Conta Corrente',
-			'historico' => 'Historico',
+			'id' => 'ID',
+			'departamento_id_departamento' => 'Departamento Id Departamento',
 		);
 	}
 
@@ -92,43 +84,38 @@ class Aluno extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('curso',$this->curso,true);
-		$criteria->compare('ano_ingresso',$this->ano_ingresso,true);
-		$criteria->compare('banco',$this->banco);
-		$criteria->compare('agencia',$this->agencia);
-		$criteria->compare('cc',$this->cc);
-		$criteria->compare('historico',$this->historico,true);
+		$criteria->compare('departamento_id_departamento',$this->departamento_id_departamento);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
         
-         public function cadastroAluno($pessoa)
+         public function cadastroProfessor($pessoa)
         {
             
-            $sql = " INSERT INTO `aluno`( `curso`, `ano_ingresso`, `banco`, `agencia`, `cc`, `historico`)  
+            $sql = " INSERT INTO `professor`( `curso`, `ano_ingresso`, `banco`, `agencia`, `cc`, `historico`)  
                      VALUES ($pessoa->curso,$pessoa->ano_ingresso,$pessoa->banco,$pessoa->agencia,$pessoa->cc,$pessoa->historico)";
        //   dd($sql);
             $comando = Yii::app()->db->createCommand($sql);   
             $comando->execute();
         }
         
-        public function procuraId($aluno){
+        public function procuraIdDepartamento($professor){
                        
-          $sql = "SELECT id FROM `aluno` WHERE agencia = $aluno->agencia and cc = $aluno->cc";
+          $sql = "SELECT id FROM `aluno` WHERE agencia = $professor->agencia and cc = $professor->cc";
          // dd($sql); 
           $comando = Yii::app()->db->createCommand($sql);   
          // $comando->execute();
           //dd($comando); 
           return $comando->queryRow();
         }
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Aluno the static model class
+	 * @return Professor the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

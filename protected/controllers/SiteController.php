@@ -76,22 +76,89 @@ class SiteController extends Controller
         public function actionAluno()
 	{
 		$model=new Aluno;
-                
+                $model_aux =new Pessoa;
+               
 		if(isset($_POST['Aluno']))
 		{
-                    
+                     // d($_POST);
 			$model->attributes=$_POST['Aluno'];
+                        $model_aux->attributes=$_POST['Pessoa'];
                         
-                        $model->cadastroAluno($model);
-                        
+                       // d($model);
+                       // dd($model_aux);
 			if($model->validate())
-			{
+			{       
+                            $model->cadastroAluno($model);
+                            
+                           // d($model);
+                            
+                            $id_aluno = (int)$model->procuraId($model);
+                            
+                           // dd($id_aluno);
+                            
+                            $model_aux->cadastroPessoa($model_aux, $id_aluno);
 				
 			}
 		}
-		$this->render('aluno',array('model'=>$model));
+		$this->render('aluno',array('model'=>$model,
+                                            'model_aux'=>$model_aux));
+	}
+        
+        public function actionProfessor()
+	{
+		$model=new Professor;
+                $model_aux =new Pessoa;
+               
+		if(isset($_POST['Professor']))
+		{
+                     // d($_POST);
+			$model->attributes=$_POST['Professor'];
+                        $model_aux->attributes=$_POST['Pessoa'];
+                        
+                       // d($model);
+                       // dd($model_aux);
+			if($model->validate())
+			{       
+                            $model->cadastroAluno($model);
+                            
+                           // d($model);
+                            
+                            $id_aluno = (int)$model->procuraId($model);
+                            
+                           // dd($id_aluno);
+                            
+                            $model_aux->cadastroPessoa($model_aux, $id_aluno);
+				
+			}
+		}
+		$this->render('professor',array('model'=>$model,
+                                            'model_aux'=>$model_aux));
 	}
 
+        
+           public function actionDepartamento()
+	{
+		$model=new Departamento;
+              
+              
+		if(isset($_POST['Departamento']))
+		{
+                      
+			$model->attributes=$_POST['Departamento'];
+                      
+                        
+                     
+			if($model->validate())
+			{       
+                            $model->cadastroDepartamento($model);
+                         
+				
+			}
+		}
+               // dd($model);
+		$this->render('departamento',array('model'=>$model,
+                                            ));
+	}
 	/**
 	 * Displays the login page
 	 */

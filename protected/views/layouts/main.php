@@ -32,7 +32,10 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                                  array('label'=>'Aluno', 'url'=>array('/site/aluno')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+                                array('label'=>'Professor', 'url'=>array('/site/professor')),
+                                array('label'=>'Departamento', 'url'=>array('/site/departamento')),
+                                array('label'=>'Busca Aluno', 'url'=>array('/site/aluno')),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

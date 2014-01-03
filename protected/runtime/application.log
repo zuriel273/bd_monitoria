@@ -221,3 +221,330 @@ Stack trace:
 REQUEST_URI=/bd_monitoria/index.php/site/aluno
 HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
 ---
+2014/01/03 22:22:17 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.cpf" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cpf')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('cpf')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'cpf')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'cpf', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'cpf', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\aluno.php(76): CActiveForm->textField(Object(Aluno), 'cpf')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('aluno', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(92): CController->render('aluno', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/
+---
+2014/01/03 22:22:38 [error] [php] Undefined variable: POST (C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bd_monitoria\index.php(13): CWebApplication->run()
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:22:55 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.cpf" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cpf')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('cpf')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'cpf')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'cpf', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'cpf', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\aluno.php(76): CActiveForm->textField(Object(Aluno), 'cpf')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('aluno', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(92): CController->render('aluno', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/page?view=about
+---
+2014/01/03 22:26:17 [error] [php] Undefined variable: model_aux (C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php:86)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\bd_monitoria\index.php(13): CWebApplication->run()
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (86)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:44:27 [error] [exception.CException] exception 'CException' with message 'Pessoa and its behaviors do not have a method or closure named "validade".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('validade', Array)
+#1 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(89): CActiveRecord->__call('validade', Array)
+#2 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(89): Pessoa->validade()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 22:44:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,1,1,1,1,1)' at line 2. The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,,1,1,1,1,1,1).
+in C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php (141)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (91)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:44:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,1,1,1,1,1)' at line 2. The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,,1,1,1,1,1,1)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php(141): CDbCommand->execute()
+#1 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(91): Pessoa->cadastroPessoa(Object(Pessoa))
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 22:46:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,1,1,1,1,1)' at line 2. The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,,1,1,1,1,1,1).
+in C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php (141)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (91)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:46:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,1,1,1,1,1)' at line 2. The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,,1,1,1,1,1,1)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php(141): CDbCommand->execute()
+#1 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(91): Pessoa->cadastroPessoa(Object(Pessoa))
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 22:46:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoria`.`pessoa`, CONSTRAINT `fk_pessoa_professor1` FOREIGN KEY (`professor_id_professor`) REFERENCES `professor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,1,1,1,1,1,1,1).
+in C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php (141)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (91)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:46:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`monitoria`.`pessoa`, CONSTRAINT `fk_pessoa_professor1` FOREIGN KEY (`professor_id_professor`) REFERENCES `professor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
+                     VALUES (345,1,111,1,1,1,1,1,1,1)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php(141): CDbCommand->execute()
+#1 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(91): Pessoa->cadastroPessoa(Object(Pessoa))
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 23:13:03 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "value".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(125): CComponent->__call('value', Array)
+#1 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(125): CDbCommand->value()
+#2 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(95): Aluno->procuraId(Object(Aluno))
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 23:17:23 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "id".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(125): CComponent->__call('id', Array)
+#1 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(125): CDbCommand->id()
+#2 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(95): Aluno->procuraId(Object(Aluno))
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 23:18:47 [error] [php] Array to string conversion (C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bd_monitoria\index.php(13): CWebApplication->run()
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+in C:\xampp\htdocs\bd_monitoria\protected\models\Pessoa.php (138)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (99)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/04 00:26:55 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.departamento_id_departamento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('departamento_id...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('departamento_id...')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Departamento), 'departamento_id...')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Departamento), 'departamento_id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Departamento), 'departamento_id...', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\professor.php(24): CActiveForm->textField(Object(Departamento), 'departamento_id...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('professor', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(159): CController->render('professor', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionDepartamento()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('departamento')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/departamen...')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/departamento
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/professor
+---
+2014/01/04 00:28:38 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.departamento_id_departamento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('departamento_id...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('departamento_id...')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Departamento), 'departamento_id...')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Departamento), 'departamento_id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Departamento), 'departamento_id...', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\professor.php(24): CActiveForm->textField(Object(Departamento), 'departamento_id...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('professor', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(159): CController->render('professor', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionDepartamento()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('departamento')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/departamen...')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/departamento
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/professor
+---
+2014/01/04 00:28:48 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.departamento_id_departamento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('departamento_id...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('departamento_id...')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Departamento), 'departamento_id...')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Departamento), 'departamento_id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Departamento), 'departamento_id...', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\professor.php(24): CActiveForm->textField(Object(Departamento), 'departamento_id...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('professor', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(159): CController->render('professor', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionDepartamento()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('departamento')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/departamen...')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/departamento
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/professor
+---
+2014/01/04 00:29:21 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.departamento_id_departamento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('departamento_id...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('departamento_id...')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Departamento), 'departamento_id...')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Departamento), 'departamento_id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Departamento), 'departamento_id...', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\professor.php(24): CActiveForm->textField(Object(Departamento), 'departamento_id...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('professor', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(159): CController->render('professor', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionDepartamento()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('departamento')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/departamen...')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/departamento
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/professor
+---
+2014/01/04 00:33:16 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.departamento_id_departamento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('departamento_id...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('departamento_id...')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Departamento), 'departamento_id...')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Departamento), 'departamento_id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Departamento), 'departamento_id...', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\professor.php(24): CActiveForm->textField(Object(Departamento), 'departamento_id...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('professor', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(159): CController->render('professor', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionDepartamento()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('departamento')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/departamen...')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/departamento
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/professor
+---
