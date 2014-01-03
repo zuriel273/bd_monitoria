@@ -1,0 +1,24 @@
+2014/01/03 20:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('contact')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bd_monitoria/contact
+---
+2014/01/03 20:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('about')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bd_monitoria/about
+---
+2014/01/03 20:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "About".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('About')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bd_monitoria/About
+---

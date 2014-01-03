@@ -10,7 +10,7 @@ return array(
 	'name'=>'My Web Application',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log', 'kint'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -37,7 +37,11 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		
+                
+                'kint' => array(
+                    'class' => 'ext.kint.kint',
+                ),
+            
 		'urlManager'=>array(
 			'urlFormat'=>'path',
                         'showScriptName'=>'false',
