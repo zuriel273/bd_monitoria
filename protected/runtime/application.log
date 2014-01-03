@@ -22,3 +22,202 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/bd_monitoria/About
 ---
+2014/01/03 20:54:13 [error] [exception.CException] exception 'CException' with message 'Property "Pessoa.name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Pessoa), 'name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Pessoa), 'name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Pessoa), 'name', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\contact.php(42): CActiveForm->textField(Object(Pessoa), 'name')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(73): CController->render('contact', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionContact()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('contact')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contact')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/contact
+HTTP_REFERER=http://localhost/bd_monitoria/index.php
+---
+2014/01/03 21:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aluno".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('aluno')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('aluno/aluno')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bd_monitoria/index.php/aluno/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/page?view=about
+---
+2014/01/03 21:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aluno".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('aluno')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('aluno/aluno')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bd_monitoria/index.php/aluno/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/page?view=about
+---
+2014/01/03 21:31:28 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'name', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\contact.php(42): CActiveForm->textField(Object(Aluno), 'name')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(98): CController->render('contact', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/index
+---
+2014/01/03 21:32:26 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'name', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\contact.php(42): CActiveForm->textField(Object(Aluno), 'name')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(98): CController->render('contact', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/index
+---
+2014/01/03 21:33:27 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'name', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\contact.php(42): CActiveForm->textField(Object(Aluno), 'name')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(89): CController->render('contact', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/index
+---
+2014/01/03 21:33:31 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Aluno), 'name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Aluno), 'name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Aluno), 'name', Array)
+#5 C:\xampp\htdocs\bd_monitoria\protected\views\site\contact.php(42): CActiveForm->textField(Object(Aluno), 'name')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(89): CController->render('contact', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/index
+---
+2014/01/03 21:51:22 [error] [php] Argument 1 passed to Aluno::cadastroAluno() must be an instance of Pessoa, instance of Aluno given, called in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php on line 85 and defined (C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\bd_monitoria\index.php(13): CWebApplication->run()
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+in C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php (108)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (85)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 21:51:52 [error] [exception.CException] exception 'CException' with message 'Property "Aluno.cpf" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('cpf')
+#1 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(111): CActiveRecord->__get('cpf')
+#2 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(85): Aluno->cadastroAluno(Object(Aluno))
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---
+2014/01/03 22:08:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dasdas' in 'field list'. The SQL statement executed was:  INSERT INTO `aluno`( `curso`, `ano_ingresso`, `banco`, `agencia`, `cc`, `historico`)  
+                     VALUES (dasdas,dasda,adsasd,dsadas,dasdas,dasdashjhkl).
+in C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php (115)
+in C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php (85)
+in C:\xampp\htdocs\bd_monitoria\index.php (13)
+2014/01/03 22:08:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dasdas' in 'field list'. The SQL statement executed was:  INSERT INTO `aluno`( `curso`, `ano_ingresso`, `banco`, `agencia`, `cc`, `historico`)  
+                     VALUES (dasdas,dasda,adsasd,dsadas,dasdas,dasdashjhkl)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\bd_monitoria\protected\models\Aluno.php(115): CDbCommand->execute()
+#1 C:\xampp\htdocs\bd_monitoria\protected\controllers\SiteController.php(85): Aluno->cadastroAluno(Object(Aluno))
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAluno()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('aluno')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/aluno')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\bd_monitoria\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/bd_monitoria/index.php/site/aluno
+HTTP_REFERER=http://localhost/bd_monitoria/index.php/site/aluno
+---

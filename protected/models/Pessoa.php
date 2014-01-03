@@ -136,6 +136,10 @@ class Pessoa extends CActiveRecord
         {
             $sql = "INSERT INTO `pessoa`(`cpf`, `nome`, `email`, `senha`, `rg`, `orgao_emissor`, `endereco`, `telefone`, `tipo`, `matricula`) 
                      VALUES (.$pessoa->cpf.,.$pessoa->nome.,.$pessoa->email.,.$pessoa->senha.,.$pessoa->rg.,.$pessoa->orgao_emissor.,.$pessoa->endereco.,.$pessoa->telefone.,.$pessoa->tipo.,.$pessoa->matricula.)";
+        
+            dd($sql);
+          
+           // $results=$command->query();
         }
 
 

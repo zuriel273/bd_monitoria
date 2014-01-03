@@ -54,6 +54,7 @@ class SiteController extends Controller
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
+                    dd($model);
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
@@ -70,6 +71,25 @@ class SiteController extends Controller
 			}
 		}
 		$this->render('contact',array('model'=>$model));
+	}
+        
+        public function actionAluno()
+	{
+		$model=new Aluno;
+                
+		if(isset($_POST['Aluno']))
+		{
+                    
+			$model->attributes=$_POST['Aluno'];
+                        
+                        $model->cadastroAluno($model);
+                        
+			if($model->validate())
+			{
+				
+			}
+		}
+		$this->render('aluno',array('model'=>$model));
 	}
 
 	/**
