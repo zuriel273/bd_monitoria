@@ -80,22 +80,17 @@ class SiteController extends Controller
                
 		if(isset($_POST['Aluno']))
 		{
-                     // d($_POST);
+                     
 			$model->attributes=$_POST['Aluno'];
                         $model_aux->attributes=$_POST['Pessoa'];
                         
-                       // d($model);
-                       // dd($model_aux);
+                     
 			if($model->validate())
 			{       
                             $model->cadastroAluno($model);
-                            
-                           // d($model);
-                            
+                       
                             $id_aluno = (int)$model->procuraId($model);
-                            
-                           // dd($id_aluno);
-                            
+                  
                             $model_aux->cadastroPessoa($model_aux, $id_aluno);
 				
 			}
@@ -104,6 +99,27 @@ class SiteController extends Controller
                                             'model_aux'=>$model_aux));
 	}
         
+        
+        public function actionGridAluno()
+	{
+		$model=new Aluno;
+                $model_aux =new Pessoa;
+               //dd($model);
+		if(isset($_POST['Pessoa'] ))
+		{
+                     dd($_POST);
+			$model->attributes=$_POST['Aluno'];
+                        $model_aux->attributes=$_POST['Pessoa'];
+                        $this->renderPartial('gridAluno',array('model'=>$model,
+                                                'model_aux'=>$model_aux));
+                        
+                     
+			d($model);
+                        dd($model_aux);
+		}
+		$this->render('gridAluno',array('model'=>$model,
+                                                'model_aux'=>$model_aux));
+	}
         public function actionProfessor()
 	{
 		$model=new Professor;

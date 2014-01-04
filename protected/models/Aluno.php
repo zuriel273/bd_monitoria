@@ -124,6 +124,18 @@ class Aluno extends CActiveRecord
           //dd($comando); 
           return $comando->queryRow();
         }
+        
+       public function buscaAluno($id){
+                                            
+          $sql = "SELECT * FROM `aluno` WHERE id = $id";
+         // dd($sql); 
+          $comando = Yii::app()->db->createCommand($sql);   
+         // $comando->execute();
+          //dd($comando); 
+          return $comando->queryRow();
+       
+       }
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

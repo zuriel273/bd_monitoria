@@ -34,7 +34,7 @@
                                  array('label'=>'Aluno', 'url'=>array('/site/aluno')),
                                 array('label'=>'Professor', 'url'=>array('/site/professor')),
                                 array('label'=>'Departamento', 'url'=>array('/site/departamento')),
-                                array('label'=>'Busca Aluno', 'url'=>array('/site/aluno')),
+                                array('label'=>'Busca Aluno', 'url'=>array('/site/gridAluno')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

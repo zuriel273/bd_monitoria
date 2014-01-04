@@ -141,6 +141,16 @@ class Pessoa extends CActiveRecord
             $comando->execute();
         }
 
+        public function buscaPessoa($pessoa ){
+            $sql="SELECT * FROM `pessoa` WHERE nome like $pessoa %";
+            
+            $comando = Yii::app()->db->createCommand($sql);   
+         // $comando->execute();
+          //dd($comando); 
+          return $comando->queryRow();
+                    
+                    
+        }
 
         public static function model($className=__CLASS__)
 	{
